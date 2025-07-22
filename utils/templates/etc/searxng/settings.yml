@@ -36,12 +36,12 @@ server:
 #     - method
 
 engines:
-  - name: google
-    engine: google
-    shortcut: g
-    categories: [general]
-    language: en
-    disabled: false
+  # - name: google
+    # engine: google
+    # shortcut: g
+    # categories: [general]
+    # language: en
+    # disabled: false
 
   - name: duckduckgo
     engine: duckduckgo
