@@ -18,7 +18,6 @@ server:
   secret_key: "ultrasecretkey"
   limiter: true
   image_proxy: true
-  bind_address: "89.150.159.81"
   # public URL of the instance, to ensure correct inbound links. Is overwritten
   # by ${SEARXNG_BASE_URL}.
   # base_url: http://example.com/location
