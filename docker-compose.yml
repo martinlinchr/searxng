@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  searxng:
+    image: searxng/searxng:latest
+    restart: unless-stopped
+    volumes:
+      - ./searxng:/etc/searxng:rw  # Mount your SearXNG config directory
+    environment:
+      - SEARXNG_BASE_URL=https://searxng.martin-linde.com/
+    networks:
+      - dokploy-network
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.searxng.rule=Host(`searxng.martin-linde.com`)
+      - traefik.http.routers.searxng.entrypoints=websecure
+      - traefik.http.routers.searxng.tls.certresolver=letsencrypt
+
+networks:
+  dokploy-network:
+    external: true
