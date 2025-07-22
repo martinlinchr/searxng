@@ -18,18 +18,34 @@ server:
   secret_key: "ultrasecretkey"
   limiter: true
   image_proxy: true
+  bind_address: "89.150.159.81"
   # public URL of the instance, to ensure correct inbound links. Is overwritten
   # by ${SEARXNG_BASE_URL}.
   # base_url: http://example.com/location
 
-valkey:
+# valkey:
   # URL to connect valkey database. Is overwritten by ${SEARXNG_VALKEY_URL}.
-  url: valkey://localhost:6379/0
+  # url: valkey://localhost:6379/0
 
 # preferences:
 #   lock:
 #     - autocomplete
 #     - method
+
+engines:
+  - name: google
+    engine: google
+    shortcut: g
+    categories: [general]
+    language: en
+    disabled: false
+
+  - name: duckduckgo
+    engine: duckduckgo
+    shortcut: ddg
+    categories: [general]
+    language: en
+    disabled: false
 
 # engines:
 #
