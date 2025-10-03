@@ -112,6 +112,7 @@ server:
   # Is overwritten by ${SEARXNG_METHOD}
   method: "POST"
   default_http_headers:
+    Access-Control-Allow-Origin: "*"
     X-Content-Type-Options: nosniff
     X-Download-Options: noopen
     X-Robots-Tag: noindex, nofollow
