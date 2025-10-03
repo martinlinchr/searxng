@@ -7,6 +7,7 @@ services:
       - ./searx:/etc/searxng:rw
     environment:
       - SEARXNG_BASE_URL=https://searxng.martin-linde.com/
+      - SEARXNG_SECRET=${SEARXNG_SECRET}
     networks:
       - dokploy-network
     labels:
